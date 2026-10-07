@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Should I Eat?</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff8ed;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #d87943;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        img {
+            width: 350px;
+            max-width: 90%;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        #cravingQuestion, #result {
+            display: none;
+        }
+    </style>
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>What Should I Eat?</h1>
+
+    <p>Can't decide what to eat? Let me help you!</p>
+
+    <div id="hungerQuestion">
+
+        <h2>How hungry are you?</h2>
+
+        <button onclick="chooseHunger('little')">
+            A Little Hungry
+        </button>
+
+        <button onclick="chooseHunger('medium')">
+            Pretty Hungry
+        </button>
+
+        <button onclick="chooseHunger('very')">
+            Very Hungry
+        </button>
+
+    </div>
+
+    <div id="cravingQuestion">
+
+        <h2>What are you craving?</h2>
+
+        <button onclick="chooseCraving('fresh')">
+            Something Fresh
+        </button>
+
+        <button onclick="chooseCraving('sweet')">
+            Something Sweet
+        </button>
+
+    </div>
+
+    <div id="result">
+
+        <h2>You should eat...</h2>
+
+        <h1 id="foodName"></h1>
+
+        <br>
+
+        <img id="foodImage" alt="Food">
+
+        <br><br>
+
+        <button onclick="tryAgain()">
+            Try Again
+        </button>
+
+    </div>
+
+</body>
+</html>
